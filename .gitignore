@@ -1,0 +1,60 @@
+# Ignored by Git
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Dependency directories
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Build outputs
+dist/
+build/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Secrets and credentials
+*.key
+*.pem
+*.cert
+*.p12
+credentials.json
+secrets.yaml
+secrets.yml
+
+# Context Bundles — these belong to projects, never to the toolkit
+# If a context bundle is accidentally staged, it must not be committed.
+context-bundle*.md
+context-bundle*.yaml
+context-bundle*.yml
+
+# Log files
+*.log
+logs/
+
+# Coverage reports
+coverage/
+.coverage
+htmlcov/
+
+# Lock files (keep package-lock.json and yarn.lock if automation is added)
