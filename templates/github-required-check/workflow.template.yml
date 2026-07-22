@@ -1,0 +1,31 @@
+# {{GATE_NAME}} — CI/CD Trigger
+#
+# Component: CI/CD Trigger (thin runner)
+# Standard:  STD-003 — Verification Gate Standard
+#
+# This file contains NO gate logic.
+# All logic lives in scripts/ci/{{GATE_SCRIPT_NAME}}.sh
+#
+# Placeholders to replace:
+#   {{GATE_NAME}}         — short identifier for this gate
+#   {{GATE_DISPLAY_NAME}} — human-readable name shown in CI UI
+#   {{GATE_SCRIPT_NAME}}  — filename of the gate script (no extension)
+#   {{DEFAULT_BRANCH}}    — repository default branch (e.g. main, master)
+
+name: {{GATE_NAME}}
+
+on:
+  pull_request:
+    branches: [{{DEFAULT_BRANCH}}]
+
+jobs:
+  validate:
+    name: {{GATE_DISPLAY_NAME}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run {{GATE_NAME}} check
+        run: bash scripts/ci/{{GATE_SCRIPT_NAME}}.sh
