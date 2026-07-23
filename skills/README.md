@@ -66,6 +66,16 @@ Cyclic composition is prohibited.
 
 ---
 
+## Published Skills
+
+| Skill | ID | Domain | Description |
+|---|---|---|---|
+| Adversarial Engineering Review | SKILL-ADV-001 | `review` | Find implementation defects that standard reviews miss; pre-mortem and edge-case analysis |
+| PR Provenance | SKILL-PRV-001 | `review` | Produce a structured, evidence-backed PR description that allows reviewers to evaluate a change using the same engineering record that produced it |
+| Engineering Decision Record | SKILL-EDR-001 | `review` | Structure the full decision lifecycle: architecture debate, ADR, reversal conditions, and replay packet for organizational learning from significant failures |
+
+---
+
 ## Related ADRs
 
 - ADR-005 — Skill Authoring Standard
